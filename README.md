@@ -1,2 +1,2 @@
 # TicTacToe
-Tic Tac Toe game in java using the minimax algorithm.
+It's a simple Tic Tac Toe game created in java using the minimax algorithm.
