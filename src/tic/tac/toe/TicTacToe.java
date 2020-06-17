@@ -7,6 +7,7 @@ package tic.tac.toe;
 
 import java.awt.Component;
 import java.awt.Cursor;
+import java.awt.Dimension;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.net.URL;
@@ -28,16 +29,19 @@ public class TicTacToe extends javax.swing.JFrame {
     private int f=0;
     private URL zero,cross;
     private JLabel[][] lbls;
-	private char board[][];//={{'\0','\0','\0'},{'\0','\0','\0'},{'\0','\0','\0'}};
-	private char ai='X',human='O';
-	private char currentPlayer=ai;
-	private Map<Character,Integer> scores=new HashMap<Character,Integer>();
+    private char board[][];
+    private char ai='X',human='O';
+    private char currentPlayer=ai;
+    private Map<Character,Integer> scores=new HashMap<Character,Integer>();
+    private final Dimension screen;
         
     public TicTacToe() {
-        initComponents();
-        scores.put(ai,10);
-	scores.put(human,-10);
-        scores.put('T',99);
+       initComponents();
+       screen=getToolkit().getScreenSize();
+       this.setBounds((int)(screen.getWidth()/2.8),(int)(screen.getHeight()/3.5), this.getWidth(), this.getHeight());
+       scores.put(ai,10);
+       scores.put(human,-10);
+       scores.put('T',99);
        zero=getClass().getResource("images/oh.png");
        cross=getClass().getResource("images/ex.png");
        lbls=new JLabel[3][3];
@@ -322,6 +326,7 @@ public class TicTacToe extends javax.swing.JFrame {
 
         jMenu2.setText("Settings");
 
+        jMenuItem2.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_A, java.awt.event.InputEvent.SHIFT_MASK));
         jMenuItem2.setText("About");
         jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -330,6 +335,7 @@ public class TicTacToe extends javax.swing.JFrame {
         });
         jMenu2.add(jMenuItem2);
 
+        jMenuItem1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F4, java.awt.event.InputEvent.ALT_MASK));
         jMenuItem1.setText("Exit");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
