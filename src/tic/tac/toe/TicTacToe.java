@@ -296,7 +296,7 @@ public class TicTacToe extends javax.swing.JFrame {
         jMenuItem1 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("\"TICTacToe\"");
+        setTitle("TicTacToe v1.0");
         setBackground(new java.awt.Color(0, 0, 51));
         setResizable(false);
 

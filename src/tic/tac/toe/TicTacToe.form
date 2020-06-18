@@ -38,7 +38,7 @@
   </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
-    <Property name="title" type="java.lang.String" value="&quot;TICTacToe&quot;"/>
+    <Property name="title" type="java.lang.String" value="TicTacToe v1.0"/>
     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
       <Color blue="33" green="0" red="0" type="rgb"/>
     </Property>
